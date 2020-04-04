@@ -1,0 +1,341 @@
+.modal-screen {
+  position: fixed;
+  z-index: 9500;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: all;
+  touch-action: auto;
+
+  &.overlay {
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    border: 0;
+    background: $color-white;
+  }
+
+  &.overlay-full {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: $color-white;
+  }
+}
+
+#the-canvas {
+  width: 100%;
+}
+
+.modal-dialog {
+  position: relative;
+  display: block;
+  min-height: 145px;
+  border-top: 10px solid color($theme-color-warning);
+  margin: auto;
+  background: $color-white;
+
+  /* big screens */
+  @media only screen and (min-width: $medium-screen) {
+    top: 50%;
+    width: 500px;
+    max-height: 85vh;
+    overflow-y: auto;
+    transform: translateY(-50%);
+  }
+  /* little screens */
+  @media only screen and (max-width: $medium-screen - 1px) {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    height: 100%;
+
+    button {
+      margin-bottom: 20px;
+    }
+  }
+
+  .svg-inline--fa {
+    margin-right: 0;
+  }
+}
+
+.modal-error {
+  .modal-dialog {
+    border-color: color($theme-color-secondary-dark);
+  }
+}
+
+.app-timeout-modal {
+  > .modal-header,
+  .usa-button--outline {
+    display: none;
+  }
+  padding: 60px 0;
+  background-color: color($theme-color-warning);
+  font-size: 30px;
+  text-align: center;
+}
+
+.file-upload-status-modal {
+  .status-message {
+    margin-bottom: 10px;
+    font-size: 48px;
+    font-weight: $font-semibold;
+  }
+
+  .percent-complete {
+    margin-bottom: 25px;
+    font-size: 32px;
+    font-weight: $font-bold;
+  }
+
+  .progress-bar {
+    width: 75%;
+    height: 40px;
+    margin: 5px auto;
+    background: $color-white;
+    border-radius: 5px;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background: $color-green;
+    border-radius: 5px;
+  }
+
+  .cancel {
+    > button {
+      color: $color-white;
+      font-size: 17px;
+      font-weight: $font-semibold;
+    }
+  }
+
+  width: 620px;
+  max-width: 100%;
+  padding: 60px 0;
+  border-top: none;
+  background-color: color($theme-color-primary);
+  color: $color-white;
+  font-family: $font-source-sans;
+  font-size: 30px;
+  text-align: center;
+}
+
+.file-upload-error {
+  > .modal-header {
+    display: none;
+  }
+
+  .uh-oh {
+    color: color($theme-color-base-darkest);
+    font-size: 48px;
+    font-weight: $font-semibold;
+  }
+
+  .message {
+    width: 80%;
+    margin: auto;
+    color: color($theme-color-base-darkest);
+    font-size: 30px;
+    font-weight: $font-semibold;
+  }
+
+  button.usa-button--outline {
+    background-color: color($theme-color-primary);
+    color: $color-white;
+  }
+
+  padding: 60px 0;
+  background-color: color($theme-color-warning);
+  color: color($theme-color-base-darkest);
+  font-size: 30px;
+  text-align: center;
+}
+
+.mobile-document-details-overlay {
+  .usa-button.heading-2.usa-button--unstyled {
+    color: color($theme-color-base-darkest);
+    text-decoration: none;
+
+    svg {
+      margin-right: 15px;
+      font-size: 20px;
+    }
+  }
+}
+
+.pdf-preview-modal {
+  top: 60px;
+  width: 90%;
+  max-width: 700px;
+  margin-bottom: 20px;
+  text-align: center;
+  transform: translateY(0);
+
+  .modal-header__title {
+    text-align: left;
+  }
+
+  .svg-inline--fa {
+    margin-right: 10px;
+    cursor: pointer;
+
+    &.disabled {
+      color: gray;
+      cursor: default;
+    }
+  }
+
+  svg:hover {
+    color: color($theme-color-primary-dark);
+  }
+
+  [data-icon='caret-left'],
+  [data-icon='caret-right'] {
+    position: relative;
+    top: 5px;
+  }
+
+  .pages {
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    width: 120px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: $font-semibold;
+  }
+}
+
+button {
+  &.disabled {
+    color: gray;
+    cursor: default;
+    pointer-events: none;
+
+    .svg-inline--fa {
+      color: gray;
+    }
+  }
+}
+
+.pdf-preview-content {
+  height: 500px;
+  border: 1px solid #ccc;
+  overflow-y: scroll;
+}
+
+@media only screen and (max-width: $medium-screen - 1px) {
+  .pdf-preview-modal {
+    top: 0;
+    width: 100%;
+    padding: 0;
+    border-top: 0;
+
+    .modal-header__title {
+      display: none;
+    }
+
+    .pdf-preview-content {
+      padding: 0 12px;
+      border: none;
+    }
+
+    .usa-button.usa-button--unstyled {
+      width: auto;
+    }
+  }
+}
+
+.modal-mobile-header {
+  padding: 12px;
+  background: color($theme-color-primary-darker);
+  text-align: left;
+
+  h3,
+  .heading-3 {
+    margin-bottom: 0;
+    color: $color-white;
+
+    &.back {
+      position: relative;
+      top: 0;
+      color: $color-white;
+      text-decoration: none;
+      .svg-inline--fa {
+        color: $color-white;
+        vertical-align: 0;
+      }
+    }
+  }
+}
+
+.modal-mobile-title {
+  padding: 12px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.practitioner-matches,
+.respondent-matches {
+  overflow: auto;
+  max-height: 170px;
+  padding: 6px;
+  margin: -6px;
+}
+
+.add-edit-note-modal .usa-form-group {
+  overflow: auto;
+  max-height: 250px;
+  padding: 6px;
+  margin: -6px;
+}
+
+.edit-counsel-modal {
+  width: 700px;
+}
+
+.ustc-counsel-exists-modal {
+  width: 700px;
+
+  .usa-form-group {
+    max-width: unset;
+    margin-bottom: 20px;
+  }
+}
+
+.counsel-modal {
+  width: 700px;
+
+  .usa-form-group,
+  .usa-fieldset {
+    max-width: unset;
+    margin-bottom: 20px;
+  }
+}
+
+.add-consolidated-case-search-modal {
+  .usa-button {
+    &.ustc-search-button {
+      min-width: 90px;
+      height: 34px;
+      background-image: none;
+    }
+  }
+  .usa-input {
+    height: 34px;
+  }
+}

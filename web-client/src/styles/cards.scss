@@ -1,0 +1,223 @@
+.card {
+  border: 1px solid color($theme-color-base-lighter);
+  margin-bottom: 20px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  .header-row {
+    border-bottom: 1px solid color($theme-color-base-lighter);
+    margin-bottom: 0.75em;
+
+    .usa-search {
+      input#practitioner-search-field,
+      input#respondent-search-field {
+        width: 200px;
+        height: 34px;
+      }
+
+      input#practitioner-search-field + button,
+      input#respondent-search-field + button {
+        height: 34px;
+      }
+    }
+  }
+
+  &.highlight {
+    border: 3px solid color($theme-color-primary);
+  }
+
+  .content-wrapper {
+    padding: 15px;
+    background-color: $color-white;
+
+    &.gray {
+      background-color: color($theme-color-base-lightest);
+    }
+  }
+
+  hr {
+    border-top: 1px solid color($theme-color-base-lighter);
+  }
+
+  .actions-wrapper {
+    background-color: color($theme-color-base-lightest);
+
+    .grid-col-4 {
+      text-align: center;
+    }
+
+    button {
+      display: inline-block;
+      margin: 0px;
+    }
+  }
+
+  .toggle-button-wrapper {
+    button {
+      width: auto;
+      padding: 10px;
+      border-width: 0;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: $font-semibold;
+      text-decoration: underline;
+
+      svg {
+        margin-right: 5px;
+      }
+
+      &:focus {
+        outline: 2px dotted color($theme-color-base-light);
+      }
+
+      &.unselected {
+        background-color: transparent;
+        color: color($theme-color-primary);
+
+        &:hover {
+          color: color($theme-color-primary-dark);
+        }
+      }
+    }
+  }
+
+  &.trial-session-card {
+    height: 230px;
+  }
+}
+
+.petitions-details {
+  @media only screen and (max-width: $medium-screen - 1px) {
+    margin-top: 1.5rem;
+  }
+  @media only screen and (min-width: $medium-screen) {
+    margin-top: 2.5rem;
+  }
+}
+
+.internal-information {
+  margin-top: 2.5rem;
+}
+
+.internal-information,
+.petitions-details {
+  .chunk {
+    margin-bottom: 1rem;
+  }
+  &.less {
+    margin-top: 1.5rem;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 25px;
+    &.label {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.party-information,
+.petitions-details,
+.internal-information,
+.frequently-used-docs,
+.case-search,
+.case-notes {
+  .card {
+    margin-bottom: 0;
+    .content-wrapper {
+      padding: 20px;
+    }
+  }
+}
+
+.party-information {
+  font-size: 17px;
+
+  p {
+    margin-bottom: 10px;
+
+    &.representing-label {
+      margin-top: 20px;
+    }
+  }
+
+  @media only screen and (max-width: $medium-screen) {
+    .counsel-information {
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      border: none;
+      box-shadow: none;
+
+      .content-wrapper {
+        padding: 0;
+        margin-bottom: 2rem;
+
+        .underlined {
+          padding-bottom: 0;
+          border-bottom: none;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.frequently-used-docs {
+  .usa-button {
+    line-height: 21px;
+  }
+}
+
+.taxpayer-tools {
+  .card {
+    margin-bottom: 30px;
+
+    .content-wrapper {
+      padding: 20px;
+
+      hr {
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-top: 15px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.case-search {
+  .card {
+    .content-wrapper {
+      hr {
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: color($theme-color-base-dark);
+      }
+
+      .usa-error-message {
+        color: color($theme-color-secondary-dark);
+      }
+
+      button {
+        background-color: $color-white;
+      }
+
+      /* little screens */
+      @media only screen and (max-width: $medium-screen - 1px) {
+        button {
+          width: 132px;
+        }
+      }
+    }
+  }
+}
+.case-info-card {
+  border-bottom: 1px solid color($theme-color-base-lighter);
+}
