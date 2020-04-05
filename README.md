@@ -1,3 +1,20 @@
+### Screenshots
+
+<a href="images/1.png"><img src="images/1.png" width="47%" style="float: left; margin: 0 4px;" /></a>
+<a href="images/2.png"><img src="images/2.png" width="47%" style="float: left; margin: 0 4px;" /></a>
+<a href="images/3.png"><img src="images/3.png" width="47%" style="float: left; margin: 0 4px;" /></a>
+<a href="images/4.png"><img src="images/4.png" width="47%" style="float: left; margin: 0 4px;" /></a>
+<a href="images/5.png"><img src="images/5.png" width="47%" style="float: left; margin: 0 4px;" /></a>
+<a href="images/6.png"><img src="images/6.png" width="47%" style="float: left; margin: 0 4px;" /></a>
+<a href="images/7.png"><img src="images/7.png" width="47%" style="float: left; margin: 0 4px;" /></a>
+<a href="images/8.png"><img src="images/8.png" width="47%" style="float: left; margin: 0 4px;" /></a>
+<a href="images/9.png"><img src="images/9.png" width="47%" style="float: left; margin: 0 4px;" /></a>
+<a href="images/10.png"><img src="images/10.png" width="47%" style="float: left; margin: 0 4px;" /></a>
+<a href="images/11.png"><img src="images/11.png" width="47%" style="float: left; margin: 0 4px;" /></a>
+
+
+<br clear="both">
+
 ## Running / verifying the project via Docker
 
 Once [you have Docker installed](https://docs.docker.com/install/), the following command will spin up a Docker container with the UI, API, local S3, local Dynamo, etc. all running inside it:
@@ -95,3 +112,5 @@ cohensChambers
 ```
 
 No password is required.
+
+Pulled and modified from [ef-cms](https://github.com/ustaxcourt/ef-cms#external-users)
