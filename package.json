@@ -69,7 +69,7 @@
     "json2md": "^1.7.0",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.15",
-    "madge": "^3.7.0",
+    "madge": "^4.0.1",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.27",
     "node-sass": "^4.13.1",
