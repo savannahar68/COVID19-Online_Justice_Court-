@@ -17,6 +17,6 @@
     "pug": "^2.0.3",
     "puppeteer-core": "~1.18",
     "handlebars": "~4.5.1",
-    "node-sass": "~4.13.0"
+    "node-sass": "~7.0.0"
   }
 }
